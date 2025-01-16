@@ -1,0 +1,806 @@
+/* global */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+
+p {
+    font-size: 1rem;
+    margin-block: 0;
+}
+
+h1 {
+    margin-block: 0;
+    font-size: 2.98rem;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+h2 {
+    margin-block: 0;
+    font-size: 2.48rem;
+}
+
+h3 {
+    margin-block: 0;
+    font-size: 2.07rem;
+}
+
+h4 {
+    margin-block: 0;
+    font-size: 1.72rem;
+}
+
+h5 {
+    margin-block: 0;
+    font-size: 1.44rem;
+}
+
+h6 {
+    margin-block: 0;
+    font-size: 1.2rem;
+}
+
+/* end of global */
+
+/* navbar */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 3rem;
+    height: 85px;
+    align-items: center;
+    transition: all 0.3 ease;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: black;
+    background-color: white;
+    border-bottom: 0.1px solid rgba(255, 99, 98, 0.25);
+    z-index: 1;
+}
+
+.nav-container.shadow {
+    box-shadow: 1px 1px 5px 0px rgba(204, 204, 204, 1);
+    border-bottom: none;
+}
+
+.nav-list {
+    display: flex;
+    gap: 3rem;
+    padding-inline: 0;
+    margin-block: 0;
+}
+
+.nav-list a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+}
+
+.nav-list a:hover {
+    color: #FF6362;
+}
+
+.nav-list a.active {
+    color: #FF6362;
+}
+
+.nav-container .logo h4 {
+    font-weight: 300;
+}
+
+.nav-container .nav-toggler {
+    font-size: 1.2rem;
+    display: none;
+}
+/* end of navbar */
+
+/* index */
+#index {
+    margin-block-start: 85px;
+}
+
+#index .container {
+    padding-inline: 3rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url('/assets/image/bg-image.jpg');
+    background-size: cover;
+    background-position: bottom;
+    color: white;
+    padding-block: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+#index .description {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+#index .description p {
+    font-size: 1.2rem;
+}
+
+#index .description h1 {
+    color: #f82c2c;
+}
+
+#index .description button {
+    padding-inline: 3rem;
+    padding-block: 0.75rem;
+    width: fit-content;
+    border-radius: 5px;
+    color: white;
+    background-color: #f82c2c;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#index .description button:hover {
+    background-color: #b91f1f;
+}
+
+#index .card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#index .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1rem;
+    width: 250px;
+    background-color: white;
+    color: #f82c2c;
+    padding-block: 2rem;
+    padding-inline: 1rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 0px rgb(33, 33, 33);
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+#index .card:hover {
+    transform: scale(1.05);
+}
+
+#index .card:hover p {
+    color: #f82c2c;
+}
+
+#index .card p {
+    color: black;
+    font-weight: 300;
+}
+
+#index .card i {
+    font-size: 1.72rem;
+}
+
+#index .card h5 {
+    font-size: 1.2rem;
+}
+
+/* end of index */
+
+/* about */
+#about .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#about .section-about-us {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding-block: 3rem;
+}
+
+#about .section-about-us .description {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+#about .section-about-us .description h2 {
+    color: #f82c2c;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+#about .section-about-us .description p {
+    line-height: 1.5rem;
+}
+
+#about .section-about-us img {
+    width: 350px;
+    height: 100%;
+    border-radius: 5px;
+}
+
+#about .section-about-us button {
+    padding-inline: 3rem;
+    padding-block: 0.75rem;
+    width: fit-content;
+    border-radius: 999px;
+    color: #f82c2c;
+    background-color: inherit;
+    border: 0.5px solid #f82c2c;
+    transition: all 0.3s ease-in-out;
+}
+
+#about .section-about-us button:hover {
+    background-color: #f82c2c;
+    border: none;
+    color: white;
+}
+
+#about .section-skills {
+    display: flex;
+    background-color: #fcf9f9;
+    padding: 3rem;
+    color: #f82c2c;
+    gap: 3rem;
+}
+
+#about .our-skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#about .our-skills-container .description {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#about .our-skills-container .description h3 {
+    font-family: 'Playfair Display', sans-serif;
+}
+
+#about .skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#about .skills-container p {
+    display: flex;
+    justify-content: space-between;
+}
+
+#about .progress-bar {
+    height: 10px;
+    border-radius: 5px;
+    background-color: #fbaeae;
+}
+
+#about .progress {
+    height: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background-color: #f82c2c;
+}
+
+#about .skill {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#about .record-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#about .record {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about .section-our-team {
+    display: flex;
+    padding: 3rem;
+    gap: 1rem;
+}
+
+#about .section-our-team .card {
+    position: relative;
+    width: 350px;
+    text-align: start;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 1px 1px 5px 0px rgba(204, 204, 204, 1);
+}
+
+#about .section-our-team img {
+    width: 100%;
+    max-width: 100%;
+    height: 270px;
+    max-height: 100%;
+    object-fit: cover;
+    position: center;
+}
+
+#about .section-our-team .social-media {
+    position: absolute;
+    top: 235px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 0.5rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#about .section-our-team .image:hover .social-media {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#about .section-our-team .social-media a {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#about .section-our-team .card-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#about .section-our-team .card-info h6 {
+    font-family: 'Playfair Display';
+    color: #f82c2c;
+}
+
+#about .section-our-team .card-info p {
+    font-size: 0.833rem;
+}
+/* end of about */
+
+/* contact */
+#contact .container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fcf9f9;
+    color: #f82c2c;
+}
+
+#contact .info-input-container {
+    display: flex;
+    padding-inline: 3rem;
+    padding-block-end: 3rem;
+    justify-content: space-between;
+}
+
+#contact header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    padding-block: 3rem;
+}
+
+#contact .info-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5px;
+    border-top: 3px solid #f82c2c;
+    border-bottom: 3px solid #f82c2c;
+    padding: 3rem;
+    gap: 2rem;
+    width: 50%;
+    box-shadow: 1px 1px 5px 0px rgba(204, 204, 204, 1);
+}
+
+#contact .info-container .address, 
+#contact .info-container .phone, 
+#contact .info-container .email {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#contact .info-container .address:hover i,
+#contact .info-container .phone:hover i,
+#contact .info-container .email:hover i {
+    background-color: #f82c2c;
+    color: white;
+}
+
+#contact .info-container i {
+    font-size: 1.2rem;
+    background-color: #fcf9f9;
+    color: #f82c2c;
+    padding: 1rem;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+#contact .info-container .info p {
+    font-size: 0.833rem;
+    color: rgb(71, 71, 71);
+}
+
+#contact .info-container h6 {
+    font-family: 'Playfair Display', sans-serif;
+}
+
+#contact .info-container .info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#contact .input-container {
+    background-color: white;
+    border-radius: 5px;
+    border-top: 3px solid #f82c2c;
+    border-bottom: 3px solid #f82c2c;
+    padding: 3rem;
+    box-shadow: 1px 1px 5px 0px rgba(204, 204, 204, 1);
+}
+
+#contact .input-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+#contact .input-container .input-row-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+}
+
+#contact .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+#contact .input {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 3px;
+    border: 0.5px solid rgb(71, 71, 71);
+}
+
+#contact .input:focus {
+    border: 0.5px solid #f82c2c;
+    outline: none;
+}
+
+#contact .input::placeholder {
+    font-family: 'Raleway', sans-serif;
+}
+
+#contact textarea {
+    height: 200px;
+}
+
+#contact label {
+    color: rgb(71, 71, 71);
+}
+
+#contact button {
+    padding-inline: 3rem;
+    padding-block: 0.75rem;
+    width: fit-content;
+    border-radius: 5px;
+    color: white;
+    background-color: #f82c2c;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#contact button:hover {
+    background-color: #b91f1f;
+}
+/* end of contact */
+
+/* footer */
+footer p {
+    font-size: 0.833rem;
+}
+
+footer .info-container {
+    display: flex;
+    padding: 3rem;
+    justify-content: space-between;
+    color: rgb(71, 71, 71);
+    gap: 1rem;
+    border-top: 0.5px solid #f82c2c;
+}
+
+footer .info-container .kymchi,
+footer .info-container .navigation,
+footer .info-container .services,
+footer .info-container .contact-us {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+footer .info-container .kymchi {
+    flex-grow: 2;
+}
+
+footer .info-container .kymchi h4 {
+    font-weight: 400;
+    color: #f82c2c;
+}
+
+footer .info-container h6 {
+    color: #f82c2c;
+}
+
+footer .info-container .kymchi .social-media-list {
+    display: flex;
+    gap: 1rem;
+    padding-inline: 0;
+}
+
+footer .info-container .kymchi i {
+    padding: 10px;
+    color: rgb(71, 71, 71);
+    border: 0.5px solid rgb(71, 71, 71);
+    border-radius: 5px;
+}
+
+footer .info-container .kymchi a:hover i {
+    color: #f82c2c;
+    border: 0.5px solid #f82c2c;
+}
+
+footer .info-container .navigation .navigation-list{
+    display: flex;
+    flex-direction: column;
+    padding-inline: 0;
+    gap: 1rem;
+    margin-block: 0;
+}
+
+footer .info-container .navigation a {
+    font-size: 0.833rem;
+    color: rgb(71, 71, 71);
+}
+
+footer .info-container .navigation a:hover {
+    color: #f82c2c;
+}
+
+footer .info-container .services .services-list {
+    display: flex;
+    flex-direction: column;
+    margin-block: 0;
+    padding-inline: 0;
+    gap: 1rem;
+}
+
+footer .info-container .services a {
+    font-size: 0.833rem;
+    color: rgb(71, 71, 71);
+}
+
+footer .info-container .services a:hover {
+    color: #f82c2c;
+}
+
+footer .copyright-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f82c2c;
+    padding: 2rem;
+    color: white;
+    gap: 0.5rem;
+}
+/* end of footer */
+
+/* small laptop
+----------------------- */
+@media (max-width: 1024px) {
+    /* navigation
+    ---------- */
+    .nav-container .nav-toggler {
+        display: block;
+    }
+
+    .nav-container .nav-list {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        position: absolute;
+        top: 80px;
+        right: 3rem;
+        left: 3rem;
+        background-color: white;
+        padding-block: 1rem;
+        padding-inline: 3rem;
+        box-shadow: 1px 1px 5px 0px rgb(0, 0, 0, 0.5);
+        border-radius: 5px;
+        z-index: 2;
+    }
+
+    .nav-container .nav-list.active {
+        display: flex;
+    }
+
+    /* index
+    ----- */
+    #index .container {
+        height: 100%;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    #index .card-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3rem;
+        max-width: 90%;
+        padding-inline: 0;
+    }
+
+    #index .description {
+        text-align: center;
+    }
+
+    /* about
+    ----- */
+    #about .section-skills {
+        flex-direction: column;
+    }
+
+    #about .section-skills .record-container {
+        gap: 3rem;
+        align-self: center;
+    }
+
+    #about .section-skills .record {
+        flex: 1 1 calc(50% - 3rem);
+    }
+
+    #about .section-our-team {
+        flex-wrap: wrap;
+        gap: 3rem;
+        justify-content: center;
+        width: 75%;
+        max-width: 100%;
+        align-self: center;
+        padding-inline: 0;
+    }
+
+    #about .section-our-team .card {
+        width: 250px;
+        max-width: 100%;
+        flex: 1 1 1;
+    }
+
+    /* contact */
+    /* ------- */
+    #contact .info-input-container {
+        flex-direction: column;
+        gap: 3rem
+    }
+
+    #contact .info-container {
+        width: 100%;
+    }
+
+    /* footer */
+    /* ------ */
+    footer .info-container {
+        flex-wrap: wrap;
+    }
+
+    footer .info-container .kymchi,
+    footer .info-container .navigation,
+    footer .info-container .services,
+    footer .info-container .contact-us {
+        flex: 1 1 calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 480px) {
+    /* index */
+    /* ----- */
+    #index .container {
+        background-position: center;
+        width: 100vh;
+    }
+
+    /* about */
+    /* ----- */
+    #about .container {
+        width: 100vh;
+    }
+
+    #about .container .section-about-us {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about .container .section-about-us .description {
+        width: 100%;
+        padding-inline: 3rem;
+    }
+
+    #about .section-skills .record {
+        flex: 1 1 calc(100% - 3rem);
+    }
+
+    /* contact */
+    /* ------- */
+    #contact .container {
+        width: 100vh;
+    }
+
+    #contact header {
+        padding-inline: 3rem;
+        text-align: center;
+    }
+
+    /* footer */
+    /* ------ */
+    footer {
+        width: 100vh;
+    }
+
+    footer .info-container {
+        flex-wrap: wrap;
+    }
+
+    footer .info-container .kymchi,
+    footer .info-container .navigation,
+    footer .info-container .services,
+    footer .info-container .contact-us {
+        flex: 1 1 calc(100% - 1rem);
+    }
+}
